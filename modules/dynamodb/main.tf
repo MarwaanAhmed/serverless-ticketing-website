@@ -24,4 +24,20 @@ resource "aws_dynamodb_table" "tickets_table" {
     type = "S"
   }
 
+
+global_secondary_index {
+    name            = "UserID-index"
+    hash_key        = "UserID"
+    projection_type = "ALL"
+  }
+
+  global_secondary_index {
+    name            = "EventID-index"
+    hash_key        = "EventID"
+    projection_type = "ALL"
+  }
+  stream_enabled   = true
+  stream_view_type = "NEW_IMAGE"
+
+
 }
