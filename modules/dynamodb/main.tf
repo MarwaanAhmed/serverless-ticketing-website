@@ -3,27 +3,20 @@ resource "aws_dynamodb_table" "tickets_table" {
   billing_mode     = "PAY_PER_REQUEST"
   hash_key         = "TicketID"
 
-   attribute {
+ attribute {
     name = "TicketID"
-    type = "S"
-  }
-  attribute {
-    name = "UserID"
-    type = "S"
-  }
-  attribute {
-    name = "EventID"
-    type = "S"
-  }
-  attribute {
-    name = "Status"
-    type = "S"
-  }
-  attribute {
-    name = "CreatedAt"
-    type = "S"
+    type = "S" 
   }
 
+  attribute {
+    name = "UserID"
+    type = "S" 
+  }
+
+  attribute {
+    name = "EventID"
+    type = "S" 
+  }
 
 global_secondary_index {
     name            = "UserID-index"
