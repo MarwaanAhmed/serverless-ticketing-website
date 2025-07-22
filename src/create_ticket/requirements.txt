@@ -1,0 +1,3 @@
+# src/create_ticket/requirements.txt
+# No additional external Python libraries are required for this Lambda function.
+# boto3 is pre-installed in the AWS Lambda runtime environment.
