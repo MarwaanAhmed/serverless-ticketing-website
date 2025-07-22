@@ -39,5 +39,9 @@ global_secondary_index {
   stream_enabled   = true
   stream_view_type = "NEW_IMAGE"
 
+ tags = {
+    Name        = var.table_name
+    Project     = var.project_name
+  }
 
 }
